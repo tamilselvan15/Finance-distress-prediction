@@ -186,10 +186,6 @@ def main():
             if st.checkbox('Show Visuals'):
                 st.write(ShowVisuals(df))
                 st.pyplot()
-                    
-            if st.button("3-D Plot"):
-                st.write(ThreeDimPlot(df))
-                st.pyplot()
                 
          
     
