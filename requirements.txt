@@ -13,7 +13,7 @@ flasgger==0.9.4
 streamlit
 lightgbm
 seaborn
-base64
+pybase64
 io
 
 
