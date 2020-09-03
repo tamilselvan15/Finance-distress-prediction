@@ -181,7 +181,6 @@ def main():
                 
                 st.markdown(get_table_download_link(data), unsafe_allow_html=True)
                 
-                st.dataframe(df.head())
                 
             if st.checkbox('Show Visuals'):
                 st.write(ShowVisuals(df))
