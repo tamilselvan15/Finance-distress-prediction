@@ -10,9 +10,6 @@ import numpy as np
 import pickle
 import pandas as pd
 import streamlit as st 
-from PIL import Image
-from io import BytesIO
-import base64
 import matplotlib.pyplot as plt
 import seaborn as sns
 plt.style.use("fivethirtyeight")
@@ -154,9 +151,7 @@ def ThreeDimPlot(dt):
     py.iplot(fig)
 
 def main(): 
-    
-    #st.title("Finance Distress Predictor") 
-    img = Image.open("nttlogo-black.png")
+
     st.image(img, width = 220)
     html_temp = """
     <div style="background-color:#ADD8E6;padding:5px">
