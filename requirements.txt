@@ -13,6 +13,7 @@ flasgger==0.9.4
 streamlit
 lightgbm
 seaborn
-plotly
+base64
+io
 
 
