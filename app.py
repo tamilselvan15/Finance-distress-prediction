@@ -152,7 +152,7 @@ def ThreeDimPlot(dt):
 
 def main(): 
 
-    st.image(img, width = 220)
+    st.image("nttlogo-black.png", width = 220)
     html_temp = """
     <div style="background-color:#ADD8E6;padding:5px">
     <h2 style="color:white;font-size:xx-large;text-align:center;text-shadow:2px 2px #808080;">Finance Distress Predictor ML App </h2>
