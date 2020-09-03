@@ -14,13 +14,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 plt.style.use("fivethirtyeight")
 
-import plotly.offline as py
-from plotly.offline import init_notebook_mode, iplot
-import plotly.graph_objs as go
-from plotly import tools
-init_notebook_mode(connected = True)
-import plotly.figure_factory as ff
-
 from lightgbm import LGBMClassifier
 
 pickle_in = open("lgbm.sav","rb")
@@ -89,7 +82,7 @@ def get_table_download_link(df):
     out: href string
     """
     csv = df.to_csv(index=False)
-    b64 = base64.b64encode(
+    b64 = pybase64.b64encode(
         csv.encode()
     ).decode()  # some strings <-> bytes conversions necessary here
     return f'<a href="data:file/csv;base64,{b64}" download="myfilename.csv">Download csv file</a>'
