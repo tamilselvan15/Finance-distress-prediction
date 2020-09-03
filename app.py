@@ -12,6 +12,7 @@ import pandas as pd
 import streamlit as st 
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pybase64
 plt.style.use("fivethirtyeight")
 
 from lightgbm import LGBMClassifier
@@ -106,43 +107,6 @@ def ShowVisuals(df):
     plt.show()
     
     
-def ThreeDimPlot(dt):
-
-    trace1 = go.Scatter3d(
-        x= dt['age'],
-        y= dt['DebtRatio'],
-        z= dt['RevolvingUtilizationOfUnsecuredLines'],
-        mode='markers',
-         marker=dict(
-            color = dt['SeriousDlqin2yrs'], 
-            size= 10,
-            line=dict(
-                color= dt['SeriousDlqin2yrs'],
-                width= 12
-            ),
-            opacity=0.8
-         )
-    )
-    df = [trace1]
-
-    layout = go.Layout(
-        title = 'Character vs Gender vs Alive or not',
-        margin=dict(
-            l=0,
-            r=0,
-            b=0,
-            t=0  
-        ),
-        scene = dict(
-                xaxis = dict(title  = 'Age'),
-                yaxis = dict(title  = 'Debt Ratio'),
-                zaxis = dict(title  = 'RevolvingUtilizationOfUnsecuredLines')
-            )
-    )
-
-    fig = go.Figure(data = df, layout = layout)
-    py.iplot(fig)
-
 def main(): 
 
     st.image("nttlogo-black.png", width = 220)
