@@ -6,6 +6,7 @@ Created on Thu Jul  2 01:17:58 2020
 """
 
 
+
 import numpy as np
 import pickle
 import pandas as pd
@@ -111,11 +112,17 @@ def main():
 
     st.image("nttlogo-black.png", width = 220)
     html_temp = """
-    <div style="background-color:#ADD8E6;padding:5px">
+    <div style="background-color:#ADD8E6;padding:0.1px">
     <h2 style="color:white;font-size:xx-large;text-align:center;text-shadow:2px 2px #808080;">Finance Distress Predictor ML App </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
+    
+    html_temp2 = """
+    <p>This <b>Credit Scoring Algorithm</b> predicts the probability of risk of the customer's financial distress in the next two years.</p>
+    
+    """
+    st.markdown(html_temp2,unsafe_allow_html=True)
     
     activities = ["Know The Risk","Know The Customers"]	
     choice = st.sidebar.selectbox("Select Activities",activities)
